@@ -178,3 +178,17 @@
     padding-top: var(--spacing-md);
   }
 }
+  
+.publications-watermark {  
+  position: absolute;  
+  top: 50%;  
+  left: 50%;  
+  transform: translate(-50%, -50%);  
+  z-index: 0;  
+  pointer-events: none;  
+}  
+  
+.pub-filters, .pub-list, .pub-actions {  
+  position: relative;  
+  z-index: 2;  
+} 

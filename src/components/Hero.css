@@ -15,6 +15,7 @@
   width: 50%;
   height: 100%;
   pointer-events: none;
+  opacity: 0.5; /* Increased from 0.3 */
 }
 
 .hero-container {

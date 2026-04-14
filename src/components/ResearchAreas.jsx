@@ -56,6 +56,13 @@ const ResearchAreas = () => {
 
   return (
     <section id="research" className="research-areas">
+      {/* Floating DNA Particles */}
+      <div className="dna-particles">
+        {[...Array(10)].map((_, i) => (
+          <div key={i} className={`particle p${i}`}></div>
+        ))}
+      </div>
+      
       <div className="container">
         <div className="section-head text-center">
           <h2 className="section-title">Research Focus</h2>

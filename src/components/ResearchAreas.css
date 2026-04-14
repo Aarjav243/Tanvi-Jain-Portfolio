@@ -1,6 +1,44 @@
 .research-areas {
   background: var(--color-surface);
+  position: relative;
+  overflow: hidden;
 }
+
+.dna-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #05C3A3;
+  border-radius: 50%;
+  opacity: 0.55; /* Increased from 0.2 */
+  animation: particle-float 10s ease-in-out infinite;
+  box-shadow: 0 0 10px currentColor; /* Added glow */
+}
+
+@keyframes particle-float {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.4; }
+  50% { transform: translateY(-100px) translateX(20px); opacity: 0.9; }
+}
+
+.p0 { top: 10%; left: 5%; animation-delay: 0s; background: #05C3A3; }
+.p1 { top: 30%; left: 80%; animation-delay: 1s; background: #E85D4A; width: 14px; height: 14px; }
+.p2 { top: 70%; left: 15%; animation-delay: 2s; background: #F4A83A; }
+.p3 { top: 85%; left: 90%; animation-delay: 3s; background: #2ECC8B; }
+.p4 { top: 50%; left: 40%; animation-delay: 4s; background: #05C3A3; width: 12px; height: 12px; }
+.p5 { top: 15%; left: 60%; animation-delay: 5s; background: #E85D4A; }
+.p6 { top: 40%; left: 10%; animation-delay: 1.5s; width: 8px; height: 8px; background: #F4A83A; }
+.p7 { top: 60%; left: 70%; animation-delay: 2.5s; width: 12px; height: 12px; background: #05C3A3; }
+.p8 { top: 20%; left: 25%; animation-delay: 0.5s; background: #E85D4A; }
+.p9 { top: 80%; left: 50%; animation-delay: 3.5s; width: 10px; height: 10px; background: #F4A83A; }
 
 .text-center {
   text-align: center;

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import DnaHelix from './DnaHelix';
 import './Hero.css';
 
 const StatBadge = ({ value, label, delay }) => {
@@ -46,14 +47,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-dna-container">
-        <svg className="dna-bg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-          <path d="M30,0 Q50,50 30,100 M70,0 Q50,50 70,100" fill="none" stroke="white" strokeWidth="0.5" opacity="0.2" />
-          <circle cx="30" cy="10" r="1" fill="white" />
-          <circle cx="70" cy="10" r="1" fill="white" />
-          <circle cx="35" cy="25" r="1" fill="white" />
-          <circle cx="65" cy="25" r="1" fill="white" />
-          <circle cx="50" cy="50" r="1.5" fill="white" />
-        </svg>
+        <DnaHelix opacity={0.15} animated={true} />
       </div>
 
       <div className="container hero-container">

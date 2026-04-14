@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, FileText } from 'lucide-react';
+import DnaHelix from './DnaHelix';
 import './Publications.css';
 
 const PublicationRow = ({ year, title, authors, journal, citations, doi, delay }) => {
@@ -94,7 +95,15 @@ const Publications = () => {
 
   return (
     <section id="publications" className="publications">
-      <div className="container">
+      <DnaHelix 
+        className="publications-watermark" 
+        strokeColor="#05C3A3" 
+        opacity={0.15} 
+        width="800px" 
+        height="1200px" 
+        animated={true} 
+      />
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div className="section-head">
           <h2 className="section-title">Publications</h2>
           <p className="section-subtitle">Peer-reviewed research advancing biomedical science</p>
